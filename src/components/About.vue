@@ -17,6 +17,9 @@
           {{ type.type.name }}
         </h5>
       </div>
+      <button class="mb-4 mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Add to favorites
+      </button>
     </div>
   </div>
 </template>

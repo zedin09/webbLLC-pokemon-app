@@ -7,6 +7,13 @@
       v-model="text"
     />
   </div>
+  <div class="flex justify-center">
+    <router-link
+      class="mb-4 mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      :to="{name: 'Favorites'}"
+      >Favorites</router-link
+    >
+  </div>
   <div class="mt-10 p-4 flex flex-wrap justify-center">
     <div
       class="ml-4 text-2x text-blue-500"
@@ -23,25 +30,34 @@
 <script>
 // @ is an alias to /src
 import { reactive, toRefs, computed } from "vue";
+import Favorites from "./Favorites.vue";
 
 export default {
   name: "Home",
+  components: {
+    Favorites,
+  },
+
   setup() {
     // reactive mantiene sincronía entre state y las zonas donde se referencie
     const state = reactive({
       pokemons: [],
       urlIdLookup: {},
       text: "",
-      filteredPokemonList: computed(() => updatePokemon()), /*atributo que se recalcula en caso de ser necesario*/
+      filteredPokemonList: computed(() =>
+        updatePokemon()
+      ) /*atributo que se recalcula en caso de ser necesario*/,
     });
 
     /*La función filtra al pokemon en función de su nombre de acuerdo a los datos
     ingresados en el input*/
     function updatePokemon() {
       if (!state.text) {
-        return []
+        return [];
       }
-      return state.pokemons.filter((pokemon) => pokemon.name.includes(state.text))
+      return state.pokemons.filter((pokemon) =>
+        pokemon.name.includes(state.text)
+      );
     }
 
     // Petición con método get a la url con unos pocos parámetros en la url
