@@ -1,15 +1,14 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
+import Home from "./components/Home.vue";
+import About from "./components/About.vue";
 </script>
 
 <template>
-  <header>
-    <div >
-      <h1>Hello world with vue js</h1>
-    </div>
-  </header>
+  <div class="p-14">
+    <router-link class="flex justify-center text-4xl text-yellow-700" to="/">Pokemon Picker</router-link>
+  </div>
+  <router-view />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
