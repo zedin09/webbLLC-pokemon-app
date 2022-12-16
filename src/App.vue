@@ -5,8 +5,8 @@ import About from "./views/About.vue";
 </script>
 
 <template>
-  <div class="bg-neutral-150 flex flex-col justify-center items-center">
-    <div class="p-12 mt-8 mb-8  flex flex-col justify-center items-center border-4">
+  <div class="m-0 h-full flex flex-col justify-center items-center">
+    <div class="w-4/6 p-12 mt-8  flex flex-col justify-center items-center border-4">
       <router-link
         class="mb-4 text-3xl text-center font-extrabold text-gray-900 dark:text-yellow-700 md:text-5xl lg:text-6xl"
         to="/"
@@ -17,19 +17,14 @@ import About from "./views/About.vue";
         >
       </router-link>
       <p
-        class="m-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
+        class="mt-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
       >
         This is a pokemon wiki for pokemon lovers, in it you can see your
         favorite pokemons and add them to a list to see them whenever you want.
       </p>
     </div>
+    <router-view  class="mb-0 p-0 w-4/6"/>
   </div>
-  <router-view  class="w-full h-full"/>
 </template>
 
-<style scoped>
-* {
-  margin-top: 1em;
-  padding: 0px;
-}
-</style>
+<style scoped></style>
