@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center">
+  <div class="flex justify-center">
     <input
       type="text"
       placeholder="Enter a Pokemon here"
