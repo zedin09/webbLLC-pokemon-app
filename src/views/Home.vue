@@ -58,7 +58,7 @@ export default {
         return [];
       }
       return state.pokemons.filter((pokemon) =>
-        pokemon.name.includes(state.text)
+        pokemon.name.includes(state.text.toLocaleLowerCase())
       );
     }
 
