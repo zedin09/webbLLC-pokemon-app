@@ -1,14 +1,35 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import Home from "./components/Home.vue";
-import About from "./components/About.vue";
+import Home from "./views/Home.vue";
+import About from "./views/About.vue";
 </script>
 
 <template>
-  <div class="p-14">
-    <router-link class="flex justify-center text-4xl text-yellow-700" to="/">Pokemon Picker</router-link>
+  <div class="bg-neutral-150 flex flex-col justify-center items-center">
+    <div class="p-12 mt-8 mb-8  flex flex-col justify-center items-center border-4">
+      <router-link
+        class="mb-4 text-3xl text-center font-extrabold text-gray-900 dark:text-yellow-700 md:text-5xl lg:text-6xl"
+        to="/"
+      >
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r to-red-500 from-sky-400"
+          >Pokemon Picker</span
+        >
+      </router-link>
+      <p
+        class="m-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
+      >
+        This is a pokemon wiki for pokemon lovers, in it you can see your
+        favorite pokemons and add them to a list to see them whenever you want.
+      </p>
+    </div>
   </div>
-  <router-view />
+  <router-view  class="w-full h-full"/>
 </template>
 
-<style scoped></style>
+<style scoped>
+* {
+  margin-top: 1em;
+  padding: 0px;
+}
+</style>
